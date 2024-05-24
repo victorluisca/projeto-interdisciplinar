@@ -1,12 +1,19 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="stylesheets/style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1 class="text-3xl font-extrabold text-green-500">Gilmar</h1>
-  </body>
-</html>
+<%- include("./partials/header.ejs") %>
+
+  <section class="flex flex-row items-center justify-center">
+    <div class="flex h-[656px] w-[840px] flex-col gap-8">
+      <h1 class="mx-16 mt-20 text-6xl font-bold">
+        Find your perfect <br />
+        place to stay
+      </h1>
+      <p class="mx-16 text-3xl font-medium">
+        Lorem Ipsum is simply dummy text of the printing and <br />
+        typesetting industry.
+      </p>
+    </div>
+    <div class="h-[656px] w-[640px]">
+      <img src="imgs/header.png" alt="Foto de uma casa" />
+    </div>
+  </section>
+
+  <%- include("./partials/footer.ejs") %>
