@@ -19,6 +19,10 @@ app.get("/cadastro", (req, res) => {
   res.render("cadastro");
 });
 
+app.get("/hoteis", (req, res) => {
+  res.render("hoteis");
+});
+
 const port = 8080;
 
 app.listen(port, (err) => {
