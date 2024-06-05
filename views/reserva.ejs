@@ -1,17 +1,110 @@
 <%- include("./partials/header.ejs") %>
 
-  <section class="mt-[120px] flex w-[1400px] flex-col">
-    <div class="flex w-full flex-row items-center justify-between">
-      <div class="flex flex-col gap-y-2">
-        <h1 class="text-4xl font-bold text-cor-primaria">
-          Danubius Hotel Regents Park
-        </h1>
-        <p class="text-base font-medium text-cor-primaria">London</p>
+<section class="mt-[120px] flex w-[1400px] flex-col gap-y-8">
+  <div class="flex w-full flex-row justify-between">
+    <div class="flex flex-col gap-y-2">
+      <h1 class="text-4xl font-bold text-cor-primaria">
+        Danubius Hotel Regents Park
+      </h1>
+      <p class="text-base font-medium text-cor-primaria">London</p>
+    </div>
+    <div class="flex flex-row items-center justify-start gap-x-2">
+      <i class="fa-solid fa-share-from-square text-base text-cor-primaria"></i>
+      <span class="text-base font-semibold text-cor-primaria">Share</span>
+    </div>
+  </div>
+
+  <div class="flex w-full flex-row justify-between">
+    <div class="h-[460px] w-[675px] overflow-hidden rounded-lg shadow-md">
+      <img src="imgs/reserva-01.png" alt="Foto do Hotel para se alugar" />
+    </div>
+
+    <div
+      class="flex h-[460px] w-[675px] flex-row flex-wrap gap-x-[25px] gap-y-5"
+    >
+      <div class="h-[220px] w-[325px] overflow-hidden rounded-lg shadow-md">
+        <img src="imgs/reserva-02.png" alt="Foto do Hotel para se alugar" />
       </div>
-      <div class="flex flex-row items-center gap-x-5">
-        <!-- Colocar os icones aqui -->
+      <div class="h-[220px] w-[325px] overflow-hidden rounded-lg shadow-md">
+        <img src="imgs/reserva-03.png" alt="Foto do Hotel para se alugar" />
+      </div>
+      <div class="h-[220px] w-[325px] overflow-hidden rounded-lg shadow-md">
+        <img src="imgs/reserva-04.png" alt="Foto do Hotel para se alugar" />
+      </div>
+      <div class="h-[220px] w-[325px] overflow-hidden rounded-lg shadow-md">
+        <img src="imgs/reserva-05.png" alt="Foto do Hotel para se alugar" />
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <%- include("./partials/footer.ejs") %>
+<section class="mt-9 flex w-[1400px] flex-row justify-between">
+  <div class="flex w-[800px] flex-col gap-y-8">
+    <div class="flex flex-col gap-y-2">
+      <h2 class="text-2xl font-medium text-cor-primaria">
+        Dome hosted <span class="font-semibold">by Dorothy</span>
+      </h2>
+      <div class="flex flex-row items-center gap-x-2">
+        <span class="text-base font-normal text-cor-cinza">3 guests</span>
+        <div class="h-1 w-1 rounded-full bg-cor-cinza"></div>
+
+        <span class="text-base font-normal text-cor-cinza">1 bedroom</span>
+        <div class="h-1 w-1 rounded-full bg-cor-cinza"></div>
+
+        <span class="text-base font-normal text-cor-cinza">1 bed</span>
+        <div class="h-1 w-1 rounded-full bg-cor-cinza"></div>
+
+        <span class="text-base font-normal text-cor-cinza">1 bathroom</span>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="flex flex-col gap-y-6">
+      <div class="flex flex-row gap-x-3">
+        <i class="fa-solid fa-water-ladder text-2xl text-cor-primaria"></i>
+        <div class="flex flex-col gap-y-1">
+          <h3 class="text-base font-semibold text-cor-primaria">
+            Dive right in
+          </h3>
+          <p class="text-sm font-normal text-cor-primaria">
+            This is one of the few places in the area with a pool.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-row gap-x-3">
+        <i class="fa-regular fa-star text-2xl text-cor-primaria"></i>
+        <div class="flex flex-col gap-y-1">
+          <h3 class="text-base font-semibold text-cor-primaria">
+            Experienced host
+          </h3>
+          <p class="text-sm font-normal text-cor-primaria">
+            Dorothy has 720 reviews for other places.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="flex flex-col gap-y-5">
+      <h1 class="text-2xl font-semibold text-cor-primaria">
+        Where you'll sleep
+      </h1>
+      <div
+        class="flex h-32 w-48 flex-col gap-y-4 rounded-lg border border-zinc-200 bg-cor-quartearia"
+      >
+        <i class="fa-solid fa-bed ml-5 mt-5 text-2xl text-cor-primaria"></i>
+        <div class="mb-5 ml-5 flex flex-col gap-y-1">
+          <h3 class="text-sm font-semibold text-cor-primaria">Bedroom</h3>
+          <p class="text-xs font-normal text-cor-primaria">1 double bed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-[600px]"></div>
+</section>
+
+<%- include("./partials/footer.ejs") %>
