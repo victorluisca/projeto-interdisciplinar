@@ -93,7 +93,7 @@
         Where you'll sleep
       </h1>
       <div
-        class="flex h-32 w-48 flex-col gap-y-4 rounded-lg border border-zinc-200 bg-cor-quartearia"
+        class="flex h-32 w-48 flex-col gap-y-4 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg"
       >
         <i class="fa-solid fa-bed ml-5 mt-5 text-2xl text-cor-primaria"></i>
         <div class="mb-5 ml-5 flex flex-col gap-y-1">
@@ -102,9 +102,91 @@
         </div>
       </div>
     </div>
+
+    <hr />
+
+    <div class="flex flex-col gap-y-10">
+      <h1 class="text-2xl font-semibold text-cor-primaria">
+        What this place offers
+      </h1>
+      <div class="flex flex-row gap-x-24">
+        <div class="flex flex-col gap-y-5">
+          <div class="flex flex-row items-center gap-x-4">
+            <i class="fa-solid fa-wifi text-2xl text-cor-primaria"></i>
+            <h3 class="text-base font-semibold text-cor-primaria">Wifi</h3>
+          </div>
+
+          <div class="flex flex-row items-center gap-x-4">
+            <i class="fa-solid fa-tv text-2xl text-cor-primaria"></i>
+            <h3 class="text-base font-semibold text-cor-primaria">Tv</h3>
+          </div>
+
+          <div class="flex flex-row items-center gap-x-4">
+            <i class="fa-solid fa-dumbbell text-2xl text-cor-primaria"></i>
+            <h3 class="text-base font-semibold text-cor-primaria">
+              Exercise Space
+            </h3>
+          </div>
+
+          <div class="flex flex-row items-center gap-x-4">
+            <i
+              class="fa-solid fa-calendar ml-[5px] text-2xl text-cor-primaria"
+            ></i>
+            <h3 class="text-base font-semibold text-cor-primaria">
+              long-term stays allowed
+            </h3>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-y-5">
+          <div class="flex flex-row items-center gap-x-4">
+            <i class="fa-solid fa-water-ladder text-2xl text-cor-primaria"></i>
+            <h3 class="text-base font-semibold text-cor-primaria">Pool</h3>
+          </div>
+
+          <div class="flex flex-row items-center gap-x-4">
+            <i
+              class="fa-solid fa-snowflake ml-1 text-2xl text-cor-primaria"
+            ></i>
+            <h3 class="text-base font-semibold text-cor-primaria">
+              Air conditioning
+            </h3>
+          </div>
+
+          <div class="flex flex-row items-center gap-x-4">
+            <i class="fa-solid fa-mug-saucer text-2xl text-cor-primaria"></i>
+            <h3 class="text-base font-semibold text-cor-primaria">Breakfast</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="flex flex-col gap-y-6">
+      <div class="flex flex-col gap-y-3">
+        <div class="flex flex-row gap-x-5">
+          <i class="fa-solid fa-dragon text-2xl text-cor-primaria"></i>
+          <span class="text-2xl font-black text-cor-primaria">Smaug</span>
+        </div>
+        <p class="w-full text-justify text-base font-medium text-cor-primaria">
+          Every booking includes free protection from Host cancellations,
+          listing inaccuracies, and other issues like trouble checking in.
+        </p>
+      </div>
+      <a
+        class="text-base font-semibold text-cor-primaria underline transition-colors delay-100 duration-200 ease-in-out hover:text-cor-secundaria"
+        href="#"
+        >Learn more</a
+      >
+    </div>
   </div>
 
-  <div class="w-[600px]"></div>
+  <div class="flex w-[600px] items-end">
+    <!-- <div
+      class="h-[633px] w-[424px] rounded-xl border border-zinc-200 bg-cor-quartearia shadow-xl"
+    ></div> -->
+  </div>
 </section>
 
 <%- include("./partials/footer.ejs") %>
