@@ -1,64 +1,52 @@
 <!doctype html>
 <html lang="pt-br" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="stylesheets/style.css" />
-    <title>Airbnb - Faça já sua reserva!</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-    </style>
-    <script
-      src="https://kit.fontawesome.com/15abe5ed30.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <div class="h-screen w-screen overflow-x-hidden bg-cor-quartearia">
-      <header
-        class="flex h-[80px] w-screen flex-row items-center justify-center"
-        id="header"
-      >
-        <div
-          class="flex h-full w-[1400px] flex-row items-center justify-between"
-        >
-          <span class="text-4xl text-cor-primaria"
-            ><i class="fa-brands fa-airbnb"></i
-          ></span>
-          <nav>
-            <ul class="flex flex-row gap-x-5">
-              <li
-                class="text-base font-medium text-cor-primaria transition-colors delay-100 duration-300 ease-in-out hover:text-cor-secundaria"
-              >
-                Booking
-              </li>
-              <li
-                class="text-base font-medium text-cor-primaria transition-colors delay-100 duration-300 ease-in-out hover:text-cor-secundaria"
-              >
-                About us
-              </li>
-              <li
-                class="text-base font-medium text-cor-primaria transition-colors delay-100 duration-300 ease-in-out hover:text-cor-secundaria"
-              >
-                Location
-              </li>
-              <li
-                class="text-base font-medium text-cor-primaria transition-colors delay-100 duration-300 ease-in-out hover:text-cor-secundaria"
-              >
-                Contact
-              </li>
-            </ul>
-          </nav>
-          <a
-            class="flex flex-row items-center gap-x-3 px-6 py-3 text-cor-primaria transition-all delay-100 duration-300 ease-in-out hover:rounded-lg hover:bg-cor-primaria hover:text-cor-quartearia"
-            href="/login"
-          >
-            <span class="text-2xl">
-              <i class="fa-solid fa-right-to-bracket"></i>
-            </span>
-            <p class="text-base font-semibold">Entrar</p>
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="stylesheets/style.css" />
+  <title>Airbnb - Faça já sua reserva!</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+  </style>
+  <script src="https://kit.fontawesome.com/15abe5ed30.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="h-screen w-screen overflow-x-hidden bg-cor-quartearia">
+    <header class="flex h-[80px] w-screen flex-row items-center justify-center" id="header">
+      <div class="flex h-full w-[1400px] flex-row items-center justify-between">
+        <div class="flex flex-row gap-x-5">
+          <i class="fa-solid fa-dragon text-4xl text-cor-primaria"></i>
+          <span class="text-4xl font-black text-cor-primaria">Smaug</span>
         </div>
-      </header>
-      <main class="mb-[120px] flex w-screen flex-col items-center">
+        <nav>
+          <ul class="flex flex-row gap-x-5">
+            <li
+              class="text-xl font-medium text-cor-primaria transition-all delay-100 duration-200 ease-in-out hover:text-cor-secundaria hover:scale-110">
+              <a href="#hoteis">Hotels</a>
+            </li>
+            <li
+              class="text-xl font-medium text-cor-primaria transition-all delay-100 duration-200 ease-in-out hover:text-cor-secundaria hover:scale-110">
+              <a href="#services">Services</a>
+            </li>
+            <li
+              class="text-xl font-medium text-cor-primaria transition-all delay-100 duration-200 ease-in-out hover:text-cor-secundaria hover:scale-110">
+              <a href="#aboutus">About us</a>
+            </li>
+            <li
+              class="text-xl font-medium text-cor-primaria transition-all delay-100 duration-200 ease-in-out hover:text-cor-secundaria hover:scale-110">
+              <a href="#feedback">Feedback</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="flex flex-row items-center gap-x-3 px-6 py-3 text-cor-primaria transition-all delay-100 duration-300 ease-in-out hover:rounded-lg hover:bg-cor-primaria hover:text-cor-quartearia"
+          href="/login">
+          <span class="text-2xl">
+            <i class="fa-solid fa-right-to-bracket"></i>
+          </span>
+          <p class="text-base font-semibold">Entrar</p>
+        </a>
+      </div>
+    </header>
+    <main class="mb-[120px] flex w-screen flex-col items-center">

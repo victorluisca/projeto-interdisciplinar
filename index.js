@@ -23,6 +23,10 @@ app.get("/hoteis", (req, res) => {
   res.render("hoteis");
 });
 
+app.get("/reserva", (req, res) => {
+  res.render("reserva");
+});
+
 const port = 8080;
 
 app.listen(port, (err) => {
