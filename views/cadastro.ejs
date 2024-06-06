@@ -1,88 +1,55 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="stylesheets/style.css" />
-    <title>Smaug - Faça já sua reserva!</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-    </style>
-    <script
-      src="https://kit.fontawesome.com/15abe5ed30.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div
-      class="flex h-screen w-screen flex-row items-center justify-center bg-cor-quartearia"
-    >
-      <div class="flex w-1/4 flex-col items-center justify-center">
-        <div class="flex flex-col items-center justify-center gap-y-10">
-          <i class="fa-solid fa-dragon text-4xl text-cor-primaria"></i>
-          <p class="text-2xl font-bold text-cor-primaria">Crete an account</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="stylesheets/style.css" />
+  <title>Smaug - Faça já sua reserva!</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+  </style>
+  <script src="https://kit.fontawesome.com/15abe5ed30.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+</head>
+
+<body>
+  <div class="flex h-screen w-screen flex-row items-center justify-center bg-cor-quartearia">
+    <div class="flex w-1/4 flex-col items-center justify-center">
+      <div class="flex flex-col items-center justify-center gap-y-10">
+        <i class="fa-solid fa-dragon text-6xl text-cor-primaria"></i>
+        <p class="text-2xl font-bold text-cor-primaria">Crete an account</p>
+      </div>
+
+      <form action="" class="mt-10 w-full space-y-6" method="post">
+        <div class="flex w-full flex-col gap-y-2">
+          <label for="name" class="block text-base font-medium text-cor-primaria">Name</label>
+          <input type="text"
+            class="w-full rounded-md border-0 py-1.5 pl-2 shadow-sm outline-none ring-1 ring-inset ring-zinc-200 placeholder:text-sm placeholder:text-cor-cinza focus:border-cor-primaria focus:ring-2 focus:ring-inset focus:ring-cor-primaria"
+            name="name" autocomplete="name" placeholder="Your name" required id="name" />
         </div>
 
-        <form action="" class="mt-10 w-full space-y-6" method="post">
-          <div class="flex w-full flex-col gap-y-2">
-            <label
-              for="name"
-              class="block text-base font-medium text-cor-primaria"
-              >Name</label
-            >
-            <input
-              type="text"
-              class="w-full rounded-md border-0 py-1.5 pl-2 shadow-sm outline-none ring-1 ring-inset ring-zinc-200 placeholder:text-sm placeholder:text-cor-cinza focus:border-cor-primaria focus:ring-2 focus:ring-inset focus:ring-cor-primaria"
-              name="name"
-              autocomplete="name"
-              placeholder="Your name"
-              required
-              id="name"
-            />
-          </div>
+        <div class="flex w-full flex-col gap-y-2">
+          <label for="email" class="block text-base font-medium text-cor-primaria">Email address</label>
+          <input type="email"
+            class="w-full rounded-md border-0 py-1.5 pl-2 shadow-sm outline-none ring-1 ring-inset ring-zinc-200 placeholder:text-sm placeholder:text-cor-cinza focus:border-cor-primaria focus:ring-2 focus:ring-inset focus:ring-cor-primaria"
+            name="email" autocomplete="email" placeholder="Your email" required id="email" />
+        </div>
 
-          <div class="flex w-full flex-col gap-y-2">
-            <label
-              for="email"
-              class="block text-base font-medium text-cor-primaria"
-              >Email address</label
-            >
-            <input
-              type="email"
-              class="w-full rounded-md border-0 py-1.5 pl-2 shadow-sm outline-none ring-1 ring-inset ring-zinc-200 placeholder:text-sm placeholder:text-cor-cinza focus:border-cor-primaria focus:ring-2 focus:ring-inset focus:ring-cor-primaria"
-              name="email"
-              autocomplete="email"
-              placeholder="Your email"
-              required
-              id="email"
-            />
-          </div>
+        <div class="flex w-full flex-col gap-y-2">
+          <label for="password" class="block text-base font-medium text-cor-primaria">Password</label>
+          <input type="password"
+            class="w-full rounded-md border-0 py-1.5 pl-2 shadow-sm outline-none ring-1 ring-inset ring-zinc-200 placeholder:text-sm placeholder:text-cor-cinza focus:border-cor-primaria focus:ring-2 focus:ring-inset focus:ring-cor-primaria"
+            name="password" autocomplete="current-password" placeholder="Your password" required id="password" />
+        </div>
 
-          <div class="flex w-full flex-col gap-y-2">
-            <label
-              for="password"
-              class="block text-base font-medium text-cor-primaria"
-              >Password</label
-            >
-            <input
-              type="password"
-              class="w-full rounded-md border-0 py-1.5 pl-2 shadow-sm outline-none ring-1 ring-inset ring-zinc-200 placeholder:text-sm placeholder:text-cor-cinza focus:border-cor-primaria focus:ring-2 focus:ring-inset focus:ring-cor-primaria"
-              name="password"
-              autocomplete="current-password"
-              placeholder="Your password"
-              required
-              id="password"
-            />
-          </div>
-
-          <button
-            type="submit"
-            class="flex w-full items-center justify-center rounded-md bg-cor-primaria px-3 py-1.5 text-sm font-semibold text-cor-quartearia shadow-sm transition-colors delay-100 duration-300 ease-in-out hover:bg-cor-primaria-variacao focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Sign up
-          </button>
-        </form>
-      </div>
+        <button type="submit"
+          class="flex w-full items-center justify-center rounded-md bg-cor-primaria px-3 py-1.5 text-sm font-semibold text-cor-quartearia shadow-sm transition-colors delay-100 duration-300 ease-in-out hover:bg-cor-primaria-variacao focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          Sign up
+        </button>
+      </form>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
