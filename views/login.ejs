@@ -1,62 +1,102 @@
 <!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <title id="tituloPagina">Smaug - Make your reservation now!</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+    <script
+      src="https://kit.fontawesome.com/15abe5ed30.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="stylesheets/style.css" />
-  <title>Smaug - Make your reservation now!</title>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-  </style>
-  <script src="https://kit.fontawesome.com/15abe5ed30.js" crossorigin="anonymous"></script>
-  <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
-</head>
-
-<body>
-  <div class="flex h-screen w-screen flex-row items-center justify-center bg-cor-quartearia">
-    <div class="flex w-1/4 flex-col items-center justify-center">
-      <div class="flex flex-col items-center justify-center gap-y-10">
-        <i class="fa-solid fa-dragon text-6xl text-cor-primaria"></i>
-        <p class="text-2xl font-bold text-cor-primaria">
-          Sign in to your account
-        </p>
-      </div>
-
-      <form action="" class="mt-10 w-full space-y-6" method="post">
-        <div class="flex w-full flex-col gap-y-2">
-          <label for="email" class="block text-base font-medium text-cor-primaria">Email address</label>
-          <input type="email"
-            class="w-full rounded-md border-0 py-1.5 pl-2 shadow-sm outline-none ring-1 ring-inset ring-zinc-200 placeholder:text-sm placeholder:text-cor-cinza focus:border-cor-primaria focus:ring-2 focus:ring-inset focus:ring-cor-primaria"
-            name="email" autocomplete="email" placeholder="Your email" required id="email" />
+  <body>
+    <div
+      class="flex h-screen w-screen flex-row items-center justify-center bg-cor-quartearia"
+    >
+      <div class="flex w-1/4 flex-col items-center justify-center">
+        <div class="flex flex-col items-center justify-center gap-y-10">
+          <i class="fa-solid fa-dragon text-6xl text-cor-primaria"></i>
+          <p class="text-2xl font-bold text-cor-primaria" id="tituloLogin">
+            Sign in to your account
+          </p>
         </div>
 
-        <div class="flex w-full flex-col gap-y-2">
-          <div class="flex flex-row items-center justify-between">
-            <label for="password" class="block text-base font-medium text-cor-primaria">Password</label>
-            <div class="text-sm">
-              <a href="#" class="font-semibold text-cor-primaria hover:text-cor-primaria-variacao">Forgot password?</a>
-            </div>
+        <form action="" class="mt-10 w-full space-y-6" method="post">
+          <div class="flex w-full flex-col gap-y-2">
+            <label
+              for="email"
+              class="block text-base font-medium text-cor-primaria"
+              id="labelEmail"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="w-full rounded-md border-0 py-1.5 pl-2 shadow-sm outline-none ring-1 ring-inset ring-zinc-200 placeholder:text-sm placeholder:text-cor-cinza focus:border-cor-primaria focus:ring-2 focus:ring-inset focus:ring-cor-primaria"
+              name="email"
+              autocomplete="email"
+              placeholder="Your email"
+              required
+              id="email"
+            />
           </div>
-          <input type="password"
-            class="w-full rounded-md border-0 py-1.5 pl-2 shadow-sm outline-none ring-1 ring-inset ring-zinc-200 placeholder:text-sm placeholder:text-cor-cinza focus:border-cor-primaria focus:ring-2 focus:ring-inset focus:ring-cor-primaria"
-            name="password" autocomplete="current-password" placeholder="Your password" required id="password" />
+
+          <div class="flex w-full flex-col gap-y-2">
+            <div class="flex flex-row items-center justify-between">
+              <label
+                for="password"
+                class="block text-base font-medium text-cor-primaria"
+                id="labelSenha"
+                >Password</label
+              >
+              <div class="text-sm">
+                <a
+                  href="#"
+                  class="font-semibold text-cor-primaria hover:text-cor-primaria-variacao"
+                  id="esqueceuSenha"
+                  >Forgot password?</a
+                >
+              </div>
+            </div>
+            <input
+              type="password"
+              class="w-full rounded-md border-0 py-1.5 pl-2 shadow-sm outline-none ring-1 ring-inset ring-zinc-200 placeholder:text-sm placeholder:text-cor-cinza focus:border-cor-primaria focus:ring-2 focus:ring-inset focus:ring-cor-primaria"
+              name="password"
+              autocomplete="current-password"
+              placeholder="Your password"
+              required
+              id="password"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="flex w-full items-center justify-center rounded-md bg-cor-primaria px-3 py-1.5 text-sm font-semibold text-cor-quartearia shadow-sm transition-colors delay-100 duration-300 ease-in-out hover:bg-cor-primaria-variacao focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            id="botaoLogin"
+          >
+            Sign in
+          </button>
+        </form>
+
+        <div class="flex mt-10 items-center gap-x-1">
+          <p class="text-center text-sm font-medium" id="naoTemConta">
+            Don't have an account?
+          </p>
+          <a
+            href="/cadastro"
+            class="text-sm font-semibold leading-6 text-cor-primaria transition-colors delay-100 duration-300 ease-in-out hover:text-cor-primaria-variacao"
+            id="linkCadastro"
+            >Sign up.</a
+          >
         </div>
-
-        <button type="submit"
-          class="flex w-full items-center justify-center rounded-md bg-cor-primaria px-3 py-1.5 text-sm font-semibold text-cor-quartearia shadow-sm transition-colors delay-100 duration-300 ease-in-out hover:bg-cor-primaria-variacao focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-          Sign in
-        </button>
-      </form>
-
-      <p class="mt-10 text-center text-sm font-medium">
-        Don't have an account?
-        <a href="/cadastro"
-          class="font-semibold leading-6 text-cor-primaria transition-colors delay-100 duration-300 ease-in-out hover:text-cor-primaria-variacao">Sign
-          up.</a>
-      </p>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 
+  <script src="js/loadScriptLogin.js"></script>
 </html>

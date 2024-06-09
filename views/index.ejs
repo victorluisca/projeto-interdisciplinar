@@ -1,307 +1,430 @@
 <%- include("./partials/header.ejs") %>
 
-  <section
-    class="relative flex h-[656px] w-[1400px] flex-row items-center justify-center overflow-hidden rounded-3xl shadow-xl">
+<section
+  class="relative flex h-[656px] w-[1400px] flex-row items-center justify-center overflow-hidden rounded-3xl shadow-xl"
+>
+  <div
+    class="absolute bottom-10 flex h-[100px] w-[1000px] flex-row items-center justify-between rounded-full bg-zinc-100 shadow-2xl"
+  >
+    <div class="flex flex-row items-center">
+      <div class="ml-8 flex flex-col gap-y-2">
+        <div class="flex flex-row items-center gap-x-2">
+          <i class="fa-solid fa-location-dot text-lg text-cor-primaria"></i>
+          <h1 class="text-xl font-normal" id="tituloLocal">Location</h1>
+        </div>
+        <span
+          class="text-right text-sm font-normal text-cor-cinza"
+          id="detalhesLocal"
+          >Brazil</span
+        >
+      </div>
+
+      <div class="mx-8 h-16 w-[1px] bg-zinc-200"></div>
+
+      <div class="flex flex-col gap-y-2">
+        <div class="flex flex-row items-center gap-x-2">
+          <i class="fa-solid fa-calendar-days text-lg text-cor-primaria"></i>
+          <h1 class="text-xl font-normal" id="tituloCheckin">Check in</h1>
+        </div>
+        <span
+          class="text-right text-sm font-normal text-cor-cinza"
+          id="detalhesCheckin"
+          >10 Jun 2021</span
+        >
+      </div>
+
+      <div class="mx-8 h-16 w-[1px] bg-zinc-200"></div>
+
+      <div class="flex flex-col gap-y-2">
+        <div class="flex flex-row items-center gap-x-2">
+          <i class="fa-solid fa-calendar-days text-lg text-cor-primaria"></i>
+          <h1 class="text-xl font-normal" id="tituloCheckout">Check out</h1>
+        </div>
+        <span
+          class="text-right text-sm font-normal text-cor-cinza"
+          id="detalhesCheckout"
+          >15 Jun 2021</span
+        >
+      </div>
+
+      <div class="mx-8 h-16 w-[1px] bg-zinc-200"></div>
+
+      <div class="flex flex-col gap-y-2">
+        <div class="flex flex-row items-center gap-x-2">
+          <i class="fa-solid fa-user text-lg text-cor-primaria"></i>
+          <h1 class="text-xl font-normal" id="tituloQuartos">Rooms for</h1>
+        </div>
+        <span
+          class="text-right text-sm font-normal text-cor-cinza"
+          id="detalhesQuarto"
+          >1 room, 2 guests</span
+        >
+      </div>
+    </div>
+
     <div
-      class="absolute bottom-10 flex h-[100px] w-[1000px] flex-row items-center justify-between rounded-full bg-zinc-100 shadow-2xl">
-      <div class="flex flex-row items-center">
-        <div class="ml-8 flex flex-col gap-y-2">
-          <div class="flex flex-row items-center gap-x-2">
-            <i class="fa-solid fa-location-dot text-lg text-cor-primaria"></i>
-            <h1 class="text-xl font-normal">Location</h1>
-          </div>
-          <span class="text-right text-sm font-normal text-cor-cinza">Brazil</span>
-        </div>
-
-        <div class="mx-8 h-16 w-[1px] bg-zinc-200"></div>
-
-        <div class="flex flex-col gap-y-2">
-          <div class="flex flex-row items-center gap-x-2">
-            <i class="fa-solid fa-calendar-days text-lg text-cor-primaria"></i>
-            <h1 class="text-xl font-normal">Check in</h1>
-          </div>
-          <span class="text-right text-sm font-normal text-cor-cinza">10 Jun 2021</span>
-        </div>
-
-        <div class="mx-8 h-16 w-[1px] bg-zinc-200"></div>
-
-        <div class="flex flex-col gap-y-2">
-          <div class="flex flex-row items-center gap-x-2">
-            <i class="fa-solid fa-calendar-days text-lg text-cor-primaria"></i>
-            <h1 class="text-xl font-normal">Check out</h1>
-          </div>
-          <span class="text-right text-sm font-normal text-cor-cinza">15 Jun 2021</span>
-        </div>
-
-        <div class="mx-8 h-16 w-[1px] bg-zinc-200"></div>
-
-        <div class="flex flex-col gap-y-2">
-          <div class="flex flex-row items-center gap-x-2">
-            <i class="fa-solid fa-user text-lg text-cor-primaria"></i>
-            <h1 class="text-xl font-normal">Rooms for</h1>
-          </div>
-          <span class="text-right text-sm font-normal text-cor-cinza">1 room, 2 guests</span>
-        </div>
-      </div>
-
-      <div
-        class="flex h-[100px] w-[200px] flex-row items-center justify-center gap-x-3 rounded-full bg-cor-primaria transition-colors delay-100 duration-300 ease-in-out hover:bg-cor-primaria-variacao">
-        <i class="fa-solid fa-magnifying-glass text-lg text-cor-quartearia"></i>
-        <span class="text-base font-semibold text-cor-quartearia">Search</span>
-      </div>
+      class="flex h-[100px] w-[200px] flex-row items-center justify-center gap-x-3 rounded-full bg-cor-primaria transition-colors delay-100 duration-300 ease-in-out hover:bg-cor-primaria-variacao"
+    >
+      <i class="fa-solid fa-magnifying-glass text-lg text-cor-quartearia"></i>
+      <span class="text-base font-semibold text-cor-quartearia" id="botaoBusca"
+        >Search</span
+      >
     </div>
-    <div class="flex h-[656px] w-[760px] flex-col gap-8 bg-zinc-100">
-      <h1 class="mx-16 mt-20 text-6xl font-bold text-cor-primaria">
-        Find your perfect <br />
-        place to stay
-      </h1>
-      <p class="ml-16 mr-24 text-2xl font-medium text-cor-primaria text-justify">
-        Discover the finest destinations and carefully selected accommodations to ensure a comfortable and memorable
-        stay.
+  </div>
+  <div class="flex h-[656px] w-[760px] flex-col gap-8 bg-zinc-100">
+    <h1
+      class="mx-16 mt-20 text-6xl font-bold text-cor-primaria"
+      id="tituloCarrosel"
+    >
+      Find your perfect <br />
+      place to stay
+    </h1>
+    <p
+      class="ml-16 mr-24 text-justify text-2xl font-medium text-cor-primaria"
+      id="subtituloCarrosel"
+    >
+      Discover the finest destinations and carefully selected accommodations to
+      ensure a comfortable and memorable stay.
+    </p>
+    <div class="mx-16 mt-12 flex flex-row items-center gap-x-4">
+      <div class="flex h-14 w-14 flex-row rounded-full bg-cor-quartearia">
+        <span class="text-2xl text-cor-verde">
+          <i class="fa-solid fa-play my-4 ml-5"></i>
+        </span>
+      </div>
+      <p class="text-xl font-semibold text-cor-primaria" id="botaoAssistir">
+        Watch video
       </p>
-      <div class="mx-16 mt-12 flex flex-row items-center gap-x-4">
-        <div class="flex h-14 w-14 flex-row rounded-full bg-cor-quartearia">
-          <span class="text-2xl text-cor-verde">
-            <i class="fa-solid fa-play my-4 ml-5"></i>
-          </span>
+    </div>
+  </div>
+  <div class="h-[656px] w-[640px]">
+    <img src="imgs/header.png" alt="Foto de uma casa" />
+  </div>
+</section>
+
+<section
+  class="mt-[120px] flex w-[1400px] flex-col items-center justify-center"
+  id="hoteis"
+>
+  <div class="mb-10 flex w-full flex-row items-center justify-between">
+    <div class="w-[479px]">
+      <h1 class="mb-5 text-4xl font-bold text-cor-primaria" id="tituloHoteis">
+        Our most popular Hotels
+      </h1>
+      <p class="text-lg font-medium text-cor-primaria" id="subtituloHoteis">
+        Explore our selection and find the perfect hotel for your next trip.
+      </p>
+    </div>
+    <a
+      class="flex h-10 w-[109px] items-center justify-center rounded-3xl bg-cor-primaria text-base font-semibold text-white transition-all delay-100 duration-300 ease-in-out hover:rounded-xl hover:bg-cor-primaria-variacao"
+      href="/hoteis"
+      id="linkHoteis"
+    >
+      View All
+    </a>
+  </div>
+  <div class="flex w-full flex-row flex-wrap justify-between">
+    <div class="h-[464px] w-[411px] rounded-2xl bg-zinc-100 shadow-lg">
+      <div class="h-80 w-full overflow-hidden rounded-t-2xl">
+        <a href="/reserva">
+          <img
+            src="imgs/hotel-01.png"
+            class="transition delay-100 duration-300 ease-in-out hover:scale-110"
+            alt="Imagem do hotel"
+          />
+        </a>
+      </div>
+      <div class="ml-4 mt-6 flex flex-col">
+        <span class="mb-2 text-[12px] font-normal text-cor-verde"
+          >Miami Beach, Florida, USA</span
+        >
+        <h3 class="text-base font-semibold text-cor-primaria">
+          Oceanview Resort
+        </h3>
+        <div class="mt-6 flex flex-row items-center">
+          <p class="text-xs font-medium text-cor-primaria">
+            $200 <span id="precoHotel1">Per Night</span>
+          </p>
+          <div class="mx-8 h-4 w-[1px] bg-zinc-400"></div>
+          <div class="flex flex-row items-center gap-3">
+            <img src="imgs/stars.svg" alt="Quantidade de estrelas do hotel" />
+            <span class="text-xs font-normal text-cor-cinza">4.8</span>
+          </div>
         </div>
-        <p class="text-xl font-semibold text-cor-primaria">Watch video</p>
       </div>
     </div>
-    <div class="h-[656px] w-[640px]">
-      <img src="imgs/header.png" alt="Foto de uma casa" />
+    <div class="h-[464px] w-[411px] rounded-2xl bg-zinc-100 shadow-lg">
+      <div class="h-80 w-full overflow-hidden rounded-t-2xl">
+        <a href="/reserva">
+          <img
+            src="imgs/hotel-02.png"
+            class="transition delay-100 duration-300 ease-in-out hover:scale-110"
+            alt="Imagem do hotel"
+          />
+        </a>
+      </div>
+      <div class="mb-9 ml-4 mt-6 flex flex-col">
+        <span class="mb-2 text-[12px] font-normal text-cor-verde"
+          >Paris, France</span
+        >
+        <h3 class="text-base font-semibold text-cor-primaria">
+          Eiffel Tower View Hotel
+        </h3>
+        <div class="mt-6 flex flex-row items-center">
+          <p class="text-xs font-medium text-cor-primaria">
+            €150 <span id="precoHotel2">Per Night</span>
+          </p>
+          <div class="mx-8 h-4 w-[1px] bg-zinc-400"></div>
+          <div class="flex flex-row items-center gap-3">
+            <img src="imgs/stars.svg" alt="Quantidade de estrelas do hotel" />
+            <span class="text-xs font-normal text-cor-cinza">4.8</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+    <div class="h-[464px] w-[411px] rounded-2xl bg-zinc-100 shadow-lg">
+      <div class="h-80 w-full overflow-hidden rounded-t-2xl">
+        <a href="/reserva">
+          <img
+            src="imgs/hotel-03.png"
+            class="transition delay-100 duration-300 ease-in-out hover:scale-110"
+            alt="Imagem do hotel"
+          />
+        </a>
+      </div>
+      <div class="mb-9 ml-4 mt-6 flex flex-col">
+        <span class="mb-2 text-[12px] font-normal text-cor-verde"
+          >Tokyo, Japan</span
+        >
+        <h3 class="text-base font-semibold text-cor-primaria">
+          Sakura Gardens
+        </h3>
+        <div class="mt-6 flex flex-row items-center">
+          <p class="text-xs font-medium text-cor-primaria">
+            ¥20,000 <span id="precoHotel3">Per Night</span>
+          </p>
+          <div class="mx-8 h-4 w-[1px] bg-zinc-400"></div>
+          <div class="flex flex-row items-center gap-3">
+            <img src="imgs/stars.svg" alt="Quantidade de estrelas do hotel" />
+            <span class="text-xs font-normal text-cor-cinza">4.8</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <section class="mt-[120px] flex w-[1400px] flex-col items-center justify-center" id="hoteis">
-    <div class="mb-10 flex w-full flex-row items-center justify-between">
-      <div class="w-[479px]">
-        <h1 class="mb-5 text-4xl font-bold text-cor-primaria">
-          Our most popular Hotels
+<section
+  class="mt-[120px] flex h-[410px] w-[1400px] flex-row justify-between"
+  id="services"
+>
+  <div class="flex w-[411px] flex-col justify-between">
+    <div class="flex flex-col gap-y-5">
+      <h1 class="text-4xl font-bold text-cor-primaria" id="tituloServicos">
+        We do our best facilities provide you
+      </h1>
+      <p
+        class="text-justify text-lg font-medium text-cor-primaria"
+        id="subtituloServicos"
+      >
+        Customer service is a top priority at our hotels. From check in to check
+        out, you will be treated with attention and cordiality, ensuring a
+        personalized and enjoyable experience.
+      </p>
+    </div>
+    <button
+      class="d uration-300 h-14 w-[164px] rounded-3xl bg-cor-primaria text-base font-semibold text-white transition-all delay-100 ease-in-out hover:rounded-xl hover:bg-cor-primaria-variacao"
+      id="botaoServicos"
+    >
+      Contact now
+    </button>
+  </div>
+
+  <div class="flex w-[844px] flex-row flex-wrap gap-x-6 gap-y-6">
+    <div
+      class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg"
+    >
+      <img src="imgs/services-01.svg" alt="Icone de espaço de trabalho" />
+      <span
+        class="text-base font-normal text-cor-primaria"
+        id="trabalhoServicos"
+      >
+        Private Workspace
+      </span>
+    </div>
+
+    <div
+      class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg"
+    >
+      <img
+        src="imgs/services-02.svg"
+        alt="Icone de uma placa de estacionamento"
+      />
+      <span
+        class="text-base font-normal text-cor-primaria"
+        id="estacionamentoServicos"
+      >
+        Parking Area
+      </span>
+    </div>
+
+    <div
+      class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg"
+    >
+      <img src="imgs/services-03.svg" alt="Icone de um café da manhã" />
+      <span class="text-base font-normal text-cor-primaria" id="cafeServicos">
+        Breakfast
+      </span>
+    </div>
+
+    <div
+      class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg"
+    >
+      <img src="imgs/services-04.svg" alt="Icone de espaço de trabalho" />
+      <span class="text-base font-normal text-cor-primaria" id="wifiServicos">
+        Free Wifi
+      </span>
+    </div>
+
+    <div
+      class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg"
+    >
+      <img src="imgs/services-05.svg" alt="Icone de espaço de trabalho" />
+      <span
+        class="text-base font-normal text-cor-primaria"
+        id="eletricidadeServicos"
+      >
+        Free Electricity
+      </span>
+    </div>
+
+    <div
+      class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg"
+    >
+      <img src="imgs/services-06.svg" alt="Icone de espaço de trabalho" />
+      <span
+        class="text-base font-normal text-cor-primaria"
+        id="piscinaServicos"
+      >
+        Swimming Pool
+      </span>
+    </div>
+
+    <div
+      class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg"
+    >
+      <img src="imgs/services-07.svg" alt="Icone de espaço de trabalho" />
+      <span
+        class="text-base font-normal text-cor-primaria"
+        id="exercicioServicos"
+      >
+        Exercise Space
+      </span>
+    </div>
+
+    <div
+      class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg"
+    >
+      <img src="imgs/services-08.svg" alt="Icone de espaço de trabalho" />
+      <span class="text-base font-normal text-cor-primaria" id="outrosServicos">
+        Other Service
+      </span>
+    </div>
+  </div>
+</section>
+
+<section
+  class="mt-[120px] flex h-[520px] w-[1400px] flex-row items-center justify-center rounded-3xl shadow-xl"
+  id="aboutus"
+>
+  <div class="h-full w-[628px] overflow-hidden rounded-l-3xl">
+    <img src="imgs/about-us.png" alt="Imagem de Hotel" />
+  </div>
+  <div
+    class="flex h-full flex-1 items-center justify-center overflow-hidden rounded-r-3xl bg-zinc-100"
+  >
+    <div class="flex w-[600px] flex-col items-end gap-y-5">
+      <div class="flex flex-col gap-y-5 text-justify">
+        <h1 class="text-4xl font-bold text-cor-primaria" id="tituloSobreNos">
+          Discover our History
         </h1>
-        <p class="text-lg font-medium text-cor-primaria">
-          Explore our selection and find the perfect hotel for your next trip.
+        <p
+          class="text-lg font-medium text-cor-primaria"
+          id="subtituloSobreNos01"
+        >
+          The name "Smaug" was chosen in homage to the legendary dragon of The
+          Hobbit, known for hoarding treasures in its cave. Similarly, Smaug was
+          created to offer travelers a treasure trove of accommodation options.
+        </p>
+        <p
+          class="text-lg font-medium text-cor-primaria"
+          id="subtituloSobreNos02"
+        >
+          Since its launch, Smaug has stood out for its innovative approach and
+          focus on user experience. With an intuitive and user-friendly
+          interface, Smaug quickly became known for its speed and efficiency.
+          Travelers could find and book accommodations within minutes,
+          eliminating the need for hours of research and comparison.
         </p>
       </div>
-      <a class="flex h-10 w-[109px] items-center justify-center rounded-3xl bg-cor-primaria text-base font-semibold text-white transition-all delay-100 duration-300 ease-in-out hover:rounded-xl hover:bg-cor-primaria-variacao"
-        href="/hoteis">
-        View All
-      </a>
-    </div>
-    <div class="flex w-full flex-row flex-wrap justify-between">
-      <div class="h-[464px] w-[411px] rounded-2xl bg-zinc-100 shadow-lg">
-        <div class="h-80 w-full overflow-hidden rounded-t-2xl">
-          <a href="/reserva">
-            <img src="imgs/hotel-01.png" class="transition delay-100 duration-300 ease-in-out hover:scale-110"
-              alt="Imagem do hotel" />
-          </a>
-        </div>
-        <div class="ml-4 mt-6 flex flex-col">
-          <span class="mb-2 text-[12px] font-normal text-cor-verde">Miami Beach, Florida, USA</span>
-          <h3 class="text-base font-semibold text-cor-primaria">
-            Oceanview Resort
-          </h3>
-          <div class="mt-6 flex flex-row items-center">
-            <p class="text-xs font-medium text-cor-primaria">$200 Per Night</p>
-            <div class="mx-8 h-4 w-[1px] bg-zinc-400"></div>
-            <div class="flex flex-row items-center gap-3">
-              <img src="imgs/stars.svg" alt="Quantidade de estrelas do hotel" />
-              <span class="text-xs font-normal text-cor-cinza">4.8</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="h-[464px] w-[411px] rounded-2xl bg-zinc-100 shadow-lg">
-        <div class="h-80 w-full overflow-hidden rounded-t-2xl">
-          <a href="/reserva">
-            <img src="imgs/hotel-02.png" class="transition delay-100 duration-300 ease-in-out hover:scale-110"
-              alt="Imagem do hotel" />
-          </a>
-        </div>
-        <div class="mb-9 ml-4 mt-6 flex flex-col">
-          <span class="mb-2 text-[12px] font-normal text-cor-verde">Paris, France</span>
-          <h3 class="text-base font-semibold text-cor-primaria">
-            Eiffel Tower View Hotel
-          </h3>
-          <div class="mt-6 flex flex-row items-center">
-            <p class="text-xs font-medium text-cor-primaria">€150 Per Night</p>
-            <div class="mx-8 h-4 w-[1px] bg-zinc-400"></div>
-            <div class="flex flex-row items-center gap-3">
-              <img src="imgs/stars.svg" alt="Quantidade de estrelas do hotel" />
-              <span class="text-xs font-normal text-cor-cinza">4.8</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="h-[464px] w-[411px] rounded-2xl bg-zinc-100 shadow-lg">
-        <div class="h-80 w-full overflow-hidden rounded-t-2xl">
-          <a href="/reserva">
-            <img src="imgs/hotel-03.png" class="transition delay-100 duration-300 ease-in-out hover:scale-110"
-              alt="Imagem do hotel" />
-          </a>
-        </div>
-        <div class="mb-9 ml-4 mt-6 flex flex-col">
-          <span class="mb-2 text-[12px] font-normal text-cor-verde">Tokyo, Japan</span>
-          <h3 class="text-base font-semibold text-cor-primaria">
-            Sakura Gardens
-          </h3>
-          <div class="mt-6 flex flex-row items-center">
-            <p class="text-xs font-medium text-cor-primaria">¥20,000 Per Night</p>
-            <div class="mx-8 h-4 w-[1px] bg-zinc-400"></div>
-            <div class="flex flex-row items-center gap-3">
-              <img src="imgs/stars.svg" alt="Quantidade de estrelas do hotel" />
-              <span class="text-xs font-normal text-cor-cinza">4.8</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="mt-[120px] flex h-[410px] w-[1400px] flex-row justify-between" id="services">
-    <div class="flex w-[411px] flex-col justify-between">
-      <div class="flex flex-col gap-y-5">
-        <h1 class="text-4xl font-bold text-cor-primaria">
-          We do our best facilities provide you
-        </h1>
-        <p class="text-lg font-medium text-cor-primaria text-justify">
-          Customer service is a top priority at our hotels. From check in to check out, you will be treated with
-          attention and cordiality, ensuring a personalized and enjoyable experience.
-        </p>
-      </div>
       <button
-        class="h-14 w-[164px] rounded-3xl bg-cor-primaria text-base font-semibold text-white transition-all delay-100 duration-300 ease-in-out hover:rounded-xl hover:bg-cor-primaria-variacao">
-        Contact now
+        class="h-14 w-[164px] rounded-3xl bg-cor-primaria text-base font-semibold text-white transition-all delay-100 duration-300 ease-in-out hover:rounded-xl hover:bg-cor-primaria-variacao"
+        id="botaoExplore"
+      >
+        Explore more
       </button>
     </div>
+  </div>
+</section>
 
-    <div class="flex w-[844px] flex-row flex-wrap gap-x-6 gap-y-6">
-      <div
-        class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg">
-        <img src="imgs/services-01.svg" alt="Icone de espaço de trabalho" />
-        <span class="text-base font-normal text-cor-primaria">
-          Private Workspace
-        </span>
-      </div>
-
-      <div
-        class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg">
-        <img src="imgs/services-02.svg" alt="Icone de espaço de trabalho" />
-        <span class="text-base font-normal text-cor-primaria">
-          Parking Area
-        </span>
-      </div>
-
-      <div
-        class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg">
-        <img src="imgs/services-03.svg" alt="Icone de espaço de trabalho" />
-        <span class="text-base font-normal text-cor-primaria"> Breakfast </span>
-      </div>
-
-      <div
-        class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg">
-        <img src="imgs/services-04.svg" alt="Icone de espaço de trabalho" />
-        <span class="text-base font-normal text-cor-primaria"> Free Wifi </span>
-      </div>
-
-      <div
-        class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg">
-        <img src="imgs/services-05.svg" alt="Icone de espaço de trabalho" />
-        <span class="text-base font-normal text-cor-primaria">
-          Free Electricity
-        </span>
-      </div>
-
-      <div
-        class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg">
-        <img src="imgs/services-06.svg" alt="Icone de espaço de trabalho" />
-        <span class="text-base font-normal text-cor-primaria">
-          Swimming Pool
-        </span>
-      </div>
-
-      <div
-        class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg">
-        <img src="imgs/services-07.svg" alt="Icone de espaço de trabalho" />
-        <span class="text-base font-normal text-cor-primaria">
-          Exercise Space
-        </span>
-      </div>
-
-      <div
-        class="flex h-[193px] w-[193px] flex-col items-center justify-center gap-y-6 rounded-lg border border-zinc-200 bg-cor-quartearia transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg">
-        <img src="imgs/services-08.svg" alt="Icone de espaço de trabalho" />
-        <span class="text-base font-normal text-cor-primaria">
-          Other Service
-        </span>
-      </div>
-    </div>
-  </section>
-
-  <section class="mt-[120px] flex h-[520px] w-[1400px] flex-row items-center justify-center rounded-3xl shadow-xl"
-    id="aboutus">
-    <div class="h-full w-[628px] overflow-hidden rounded-l-3xl">
-      <img src="imgs/about-us.png" alt="Imagem de Hotel" />
-    </div>
-    <div class="flex h-full flex-1 items-center justify-center overflow-hidden rounded-r-3xl bg-zinc-100">
-      <div class="flex w-[600px] flex-col gap-y-5 items-end">
-        <div class="flex flex-col text-justify gap-y-5">
-          <h1 class="text-4xl font-bold text-cor-primaria">
-            Discover our History
-          </h1>
-          <p class="text-lg font-medium text-cor-primaria">
-            The name "Smaug" was chosen in homage to the legendary dragon of The Hobbit, known for hoarding treasures in
-            its cave. Similarly, Smaug was created to offer travelers a treasure trove of accommodation options.
-          </p>
-          <p class="text-lg font-medium text-cor-primaria">
-            Since its launch, Smaug has stood out for its innovative approach and focus on user experience. With an
-            intuitive and user-friendly interface, Smaug quickly became known for its speed and efficiency. Travelers
-            could find and book accommodations within minutes, eliminating the need for hours of research and
-            comparison.
-          </p>
-        </div>
-
-        <button
-          class="h-14 w-[164px] rounded-3xl bg-cor-primaria text-base font-semibold text-white transition-all delay-100 duration-300 ease-in-out hover:rounded-xl hover:bg-cor-primaria-variacao">
-          Explore more
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <section class="relative mt-[120px] flex h-[400px] w-[1400px] flex-row rounded-3xl shadow-xl" id="feedback">
-    <div
-      class="absolute -left-5 top-44 flex h-10 w-10 items-center justify-center rounded-full bg-cor-primaria text-cor-quartearia">
-      <i class="fa-solid fa-chevron-left text-base"></i>
-    </div>
-    <div class="flex h-full flex-1 items-center justify-center overflow-hidden rounded-l-3xl bg-zinc-100">
-      <div class="flex w-[620px] flex-col">
-        <div class="flex flex-row text-justify">
-          <i class="fa-solid fa-quote-left mr-3 text-2xl text-cor-primaria"></i>
-          <p class="text-base font-normal text-cor-primaria">
-            My experience with the hotel booking website was exceptional! As a busy individual, I always value
-            convenience and efficiency, and the service provided by the website exceeded my expectations. The
-            user-friendly interface allowed me to find and book a suitable hotel for my business trip within minutes,
-            saving me time and effort.
-            <i class="fa-solid fa-quote-right ml-3 text-2xl text-cor-primaria"></i>
-          </p>
-        </div>
-
-        <div class="mt-14 flex flex-col gap-y-3">
-          <h1 class="text-2xl font-semibold text-cor-primaria">
-            David Anderson
-          </h1>
-          <h2 class="text-sm font-normal text-cor-cinza">Sales manager</h2>
+<section
+  class="relative mt-[120px] flex h-[400px] w-[1400px] flex-row rounded-3xl shadow-xl"
+  id="feedback"
+>
+  <div
+    class="absolute -left-5 top-44 flex h-10 w-10 items-center justify-center rounded-full bg-cor-primaria text-cor-quartearia"
+  >
+    <i class="fa-solid fa-chevron-left text-base"></i>
+  </div>
+  <div
+    class="flex h-full flex-1 items-center justify-center overflow-hidden rounded-l-3xl bg-zinc-100"
+  >
+    <div class="flex w-[620px] flex-col">
+      <div class="flex flex-row text-justify">
+        <i class="fa-solid fa-quote-left mr-3 text-2xl text-cor-primaria"></i>
+        <p class="text-base font-normal text-cor-primaria" id="feedbackCliente">
+          My experience with the hotel booking website was exceptional! As a
+          busy individual, I always value convenience and efficiency, and the
+          service provided by the website exceeded my expectations. The
+          user-friendly interface allowed me to find and book a suitable hotel
+          for my business trip within minutes, saving me time and effort.
+        </p>
+        <div class="flex items-end">
+          <i
+            class="fa-solid fa-quote-right ml-3 text-end text-2xl text-cor-primaria"
+          ></i>
         </div>
       </div>
-    </div>
-    <div class="h-full w-[411px] overflow-hidden rounded-r-3xl">
-      <img src="imgs/reports.png" alt="" />
-    </div>
-    <div
-      class="absolute -right-5 top-44 flex h-10 w-10 items-center justify-center rounded-full bg-cor-primaria text-cor-quartearia">
-      <i class="fa-solid fa-chevron-right text-base"></i>
-    </div>
-  </section>
 
-  <%- include("./partials/footer.ejs") %>
+      <div class="mt-14 flex flex-col gap-y-3">
+        <h1 class="text-2xl font-semibold text-cor-primaria" id="nomeCliente">
+          David Anderson
+        </h1>
+        <h2 class="text-sm font-normal text-cor-cinza" id="cargoCliente">
+          Sales manager
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div class="h-full w-[411px] overflow-hidden rounded-r-3xl">
+    <img src="imgs/reports.png" alt="" />
+  </div>
+  <div
+    class="absolute -right-5 top-44 flex h-10 w-10 items-center justify-center rounded-full bg-cor-primaria text-cor-quartearia"
+  >
+    <i class="fa-solid fa-chevron-right text-base"></i>
+  </div>
+</section>
+
+<%- include("./partials/footerIndex.ejs") %>
