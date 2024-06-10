@@ -23,8 +23,8 @@ export default class UserService {
         UserModel.findByIdAndDelete(id).then(()=> console.log(`Usuário excluído com sucesso. id:${id}`)).catch(err => console.log(err))
     }
 
-    SelectOne(id) {
-        const user = UserModel.findOne({email:email})
+    async SelectOne(email) {
+        const user = await UserModel.findOne({email:email})
         return user
     }
 
